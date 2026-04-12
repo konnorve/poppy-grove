@@ -1,0 +1,46 @@
+# All keys are required unless you pass --allow-partial to fill_lease.py
+# Use plain text; $, %, &, etc. are escaped for LaTeX automatically.
+
+AGREEMENT_DATE: April 11, 2026
+TENANT_NAME: Jane Q. Tenant
+TENANT_EMAIL: jane.tenant@example.com
+
+LEASE_REVISION: "LA001"
+LEASE_HEADER_RIGHT: "Poppy Grove Holdings LLC"
+
+LANDLORD_LEGAL_NAME: POPPY GROVE HOLDINGS LLC
+LANDLORD_SIGNATURE_NAME: Poppy Grove Holdings LLC
+LANDLORD_EMAIL: konnorvonemster@gmail.com
+
+PREMISES_DESCRIPTION: >-
+  a room and one (1) parking space(s) and access to common areas including the
+  kitchen, bathroom, living room, laundry room, and yard
+PREMISES_STREET: 405 N Canon Ave
+PREMISES_CITY_STATE_ZIP: Sierra Madre, CA 91024
+
+LANDLORD_NOTICE_STREET: 405 N Canon Ave
+LANDLORD_NOTICE_CITY_STATE_ZIP: Sierra Madre, CA 91024
+
+TENANT_NOTICE_STREET: 405 N Canon Ave
+TENANT_NOTICE_CITY_STATE_ZIP: Sierra Madre, CA 91024
+
+TERM_START: MONTH DAY, 2026
+TERM_END: MONTH DAY, 2026
+
+MONTHLY_RENT: $1,250.00
+TOTAL_RENT_FOR_TERM: $10,000.00
+SECURITY_DEPOSIT: $1,250.00
+
+RENT_DUE_DAY_OF_MONTH: 1st
+PAYMENT_METHODS: Electronic transfer, Zelle, Personal check
+
+LATE_GRACE_DAYS: fifteen (15)
+LATE_FEE_PERCENT: "1"
+
+UTILITIES_LANDLORD_COVERS: electric, gas, trash, water, internet, heat, hot water
+
+POSSESSION_FAIL_MAX_DAYS: "0"
+POSSESSION_REFUND_BUSINESS_DAYS: "15"
+
+HOLDOVER_NOTICE_DAYS: thirty (30)
+DEFAULT_NOTICE_DAYS: thirty (30)
