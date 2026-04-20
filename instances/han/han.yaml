@@ -1,9 +1,9 @@
 # All keys are required unless you pass --allow-partial to fill_lease.py
 # Use plain text; $, %, &, etc. are escaped for LaTeX automatically.
 
-AGREEMENT_DATE: April 12, 2026
-TENANT_NAME: Lukas Moeller
-TENANT_EMAIL: lmoeller@caltech.edu
+AGREEMENT_DATE: April 20, 2026
+TENANT_NAME: Hanqiao Zhang
+TENANT_EMAIL: hzhang9@caltech.edu
 
 LEASE_REVISION: "LA001"
 LEASE_HEADER_RIGHT: "Poppy Grove Holdings LLC"
@@ -25,17 +25,15 @@ LANDLORD_NOTICE_CITY_STATE_ZIP: Sierra Madre, CA 91024
 TENANT_NOTICE_STREET: 405 N Canon Ave
 TENANT_NOTICE_CITY_STATE_ZIP: Sierra Madre, CA 91024
 
-TERM_START: April 15, 2026
+TERM_START: May 1, 2026
 TERM_END: December 31, 2026
 
 MONTHLY_RENT: $1,250.00
-TOTAL_RENT_FOR_TERM: $10,625.00
+TOTAL_RENT_FOR_TERM: $10,000.00
 SECURITY_DEPOSIT: $1,250.00
 
 RENT_DUE_DAY_OF_MONTH: 1st
 PAYMENT_METHODS: Electronic transfer, Zelle, Personal check
-PAYMENT_NOTE: >-
-  $625 payable on April 15, 2026 and then continue 
 
 LATE_GRACE_DAYS: fifteen (15)
 LATE_FEE_PERCENT: "1"

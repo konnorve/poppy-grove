@@ -21,8 +21,17 @@
 \fancyfoot[L]{\small Lease Agreement (Rev.\ %%%LEASE_REVISION%%%)}
 \fancyfoot[R]{\small\thepage\ / \pageref{LastPage}}
 
-\titleformat{\section}{\normalfont\bfseries}{}{0em}{}
-\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{0.8ex plus 0.2ex}
+% Run-in clause headings for the main body: "<n>. <Title>." flowing into the
+% first paragraph (standard legal clause style).
+\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{0.5em}{}[.\hspace{0.5em}]
+\titlespacing*{\section}{0pt}{1.2em plus 0.3em minus 0.2em}{0.5em}
+\titleformat{\subsection}[runin]{\normalfont\bfseries}{\thesubsection.}{0.5em}{}[.\hspace{0.5em}]
+\titlespacing*{\subsection}{0pt}{0.8em plus 0.2em minus 0.1em}{0.5em}
+
+% Unnumbered (starred) \subsection* keeps a display-style heading, used for the
+% standalone disclosure form page where run-in numbering is inappropriate.
+\titleformat{name=\subsection,numberless}{\normalfont\bfseries}{}{0em}{}
+\titlespacing*{name=\subsection,numberless}{0pt}{1em plus 0.3em minus 0.2em}{0.3em}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.8em}
@@ -42,51 +51,51 @@ This Lease Agreement (this ``Agreement'') is made this %%%AGREEMENT_DATE%%%, by 
 \textbf{%%%LANDLORD_LEGAL_NAME%%%} (``Landlord'') and %%%TENANT_NAME%%% (``Tenant''). Each Landlord and
 Tenant may be referred to individually as a ``Party'' and collectively as the ``Parties.''
 
-\section{1. Premises.}
+\section{Premises}
 The premises leased is %%%PREMISES_DESCRIPTION%%% located at %%%PREMISES_STREET%%%,
 %%%PREMISES_CITY_STATE_ZIP%%% (the ``Premises'').
 
-\section{2. Agreement to Lease.}
+\section{Agreement to Lease}
 Landlord agrees to lease to Tenant and Tenant agrees to lease from Landlord, according to the
 terms and conditions set forth herein, the Premises.
 
-\section{3. Term.}
+\section{Term}
 This Agreement will be for a term beginning on %%%TERM_START%%% and ending on %%%TERM_END%%%
 (the ``Term'').
 
-\section{4. Rent.}
+\section{Rent}
 Tenant will pay Landlord a rent for the Term of %%%TOTAL_RENT_FOR_TERM%%% payable as follows: %%%PAYMENT_NOTE%%% in equal monthly
 installments of %%%MONTHLY_RENT%%% (``Rent''). Rent will be payable in advance and due on the %%%RENT_DUE_DAY_OF_MONTH%%%
 day of each month during the Term. Rent will be paid to Landlord at Landlord's address provided
 herein (or to such other places as directed by Landlord) by mail or in person by one of the
 following methods: %%%PAYMENT_METHODS%%%, and will be payable in U.S.\ Dollars.
 
-\subsection*{4a. Initial Payments.}
+\subsection{Initial Payments}
 Upon execution of this Agreement by Tenant and as a condition of consideration for acceptance
 by Landlord, Tenant shall pay to Landlord the following:
 
 \begin{enumerate}[label=\Roman*.]
     \item The first rent payment.
-    \item The Security Deposit. (See \S~8)
+    \item The Security Deposit. (See \S~\ref{sec:security-deposit})
 \end{enumerate}
 
-\section{5. Late Fee.}
+\section{Late Fee}
 Rent paid after the %%%RENT_DUE_DAY_OF_MONTH%%% day of each month will be deemed as late; and if rent is not paid
 within %%%LATE_GRACE_DAYS%%% day(s) after such due date, Tenant agrees to pay a late charge of %%%LATE_FEE_PERCENT%%%\% of
 the balance due per month for each month that rent is late.
 
-\section{6. Additional Rent.}
+\section{Additional Rent}
 There may be instances under this Agreement where Tenant may be required to pay additional
 charges to Landlord. All such charges are considered additional rent under this Agreement and
 will be paid with the next regularly scheduled rent payment. Landlord has the same rights and
 Tenant has the same obligations with respect to additional rent as they do with rent.
 
-\section{7. Utilities.}
+\section{Utilities}
 Tenant is responsible for payment of all utility and other services for the Premises, with the
 exception of %%%UTILITIES_LANDLORD_COVERS%%%, which will be paid for or
 provided by Landlord.
 
-\section{8. Security Deposit.}
+\section{Security Deposit}\label{sec:security-deposit}
 Upon signing this Agreement, Tenant will pay a security deposit in the amount of %%%SECURITY_DEPOSIT%%%
 to Landlord. The security deposit will be retained by Landlord as security for Tenant's
 performance of its obligations under this Agreement. The security deposit may not be used or
@@ -98,7 +107,7 @@ amount applied by Landlord in accordance with this section). Any reason for reta
 portion of the security deposit will be explained in writing. The security deposit will not bear
 interest while held by Landlord in accordance with applicable state laws and/or local ordinances.
 
-\section{9. Landlord's Failure to Give Possession.}
+\section{Landlord's Failure to Give Possession}
 In the event Landlord is unable to give possession of the Premises to Tenant on the start date
 of the Term, Landlord will not be subject to any liability for such failure, the validity of this
 Agreement will not be affected, and the Term will not be extended. Tenant will not be liable for
@@ -107,7 +116,7 @@ the contrary, if Landlord does not deliver possession of the Premises within %%%
 Start Date, Tenant may cancel this Agreement upon notice to Landlord and Landlord shall,
 within %%%POSSESSION_REFUND_BUSINESS_DAYS%%% business days, return all monies paid by Tenant to Landlord.
 
-\section{10. Holdover Tenancy.}
+\section{Holdover Tenancy}
 If Landlord accepts a rent payment from Tenant, other than past due rent or additional rent,
 after the Term expires, both Parties understand that a month-to-month holdover tenancy will be
 created at the agreed upon monthly rent, unless proper notice has been served as required by
@@ -115,7 +124,7 @@ applicable laws. If either Tenant or Landlord wishes to end the month-to-month t
 Party must provide at least %%%HOLDOVER_NOTICE_DAYS%%% days' written notice before the desired termination
 date.
 
-\section{11. Use of Premises.}
+\section{Use of Premises}
 The Premises will be occupied only by Tenant and Tenant's immediate family and used only for
 residential purposes. Tenant will not engage in any objectionable conduct, including behavior
 which will make the Premises less fit to live in, will cause dangerous, hazardous or unsanitary
@@ -126,19 +135,19 @@ permitted to stay overnight at the Premises for more than twenty-one (21) nights
 calendar month unless a separate written agreement regarding such guest's occupancy has been
 executed by Landlord and Tenant.
 
-\section{12. Condition of the Premises.}
+\section{Condition of the Premises}
 Tenant has examined the Premises, including the appliances and fixtures, and acknowledges that
 they are in good condition and repair, normal wear excepted and tear, and accepts them in its
 current condition.
 
-\section{13. Maintenance and Repairs.}
+\section{Maintenance and Repairs}
 Tenant will maintain the Premises, including appliances and fixtures, in clean, sanitary and
 good condition and repair. Tenant will not remove Landlord's appliances and fixtures from the
 Premises for any purpose. If repairs other than general maintenance are required, Tenant will
 notify Landlord for such repairs. In the event of default by Tenant, Tenant will reimburse
 Landlord for the cost of any repairs or replacement.
 
-\section{14. Reasonable Accommodations.}
+\section{Reasonable Accommodations}
 Landlord agrees to comply with all applicable laws providing equal housing opportunities,
 including making reasonable accommodations for known physical or mental limitations of
 qualified individuals with a disability, unless undue hardship would result. Tenant is
@@ -149,7 +158,7 @@ disability if the disability is not readily apparent, and Landlord has the right
 qualified healthcare provider verifying the disability as a resource for providing the
 reasonable accommodation.
 
-\section{15. Sex Offender Registry Notice.}
+\section{Sex Offender Registry Notice}
 Pursuant to Section 290.46 of the Penal Code, information about specified registered sex
 offenders is made available to the public via an Internet website maintained by the Department
 of Justice at \url{www.meganslaw.ca.gov}. Tenant understands and agrees that they are solely
@@ -158,11 +167,11 @@ offender registry for the area surrounding the Premises. Depending on an offende
 history, this information will include either the address at which the offender resides or the
 community of residence and zip code in which he or she resides.
 
-\section{16. Compliance.}
+\section{Compliance}
 Tenant agrees to comply with all applicable laws, ordinances, requirements and regulations of
 any federal, state, county, municipal or other authority.
 
-\section{17. Mechanics' Lien.}
+\section{Mechanics' Lien}
 Tenant understands and agrees that Tenant and anyone acting on Tenant's behalf does not have
 the right to file for mechanic's liens or any other kind of liens on the Premises. Tenant
 agrees to give actual advance notice to any contractors, subcontractors or suppliers of goods,
@@ -170,11 +179,11 @@ labor or services that such liens are invalid. Tenant further agrees to take the
 steps necessary to keep the Premises free of any and all liens that may result from
 construction completed by or for Tenant.
 
-\section{18. Subordination.}
+\section{Subordination}
 With respect to the Premises, this Agreement is subordinate to any mortgage that now exists,
 or may be given later by Landlord.
 
-\section{19. Alterations.}
+\section{Alterations}
 Tenant will not make any alteration, addition or improvement to the Premises without first
 obtaining Landlord's written consent. Any and all alterations, additions or improvements to
 the Premises are without payment to Tenant and will become Landlord's property immediately on
@@ -184,11 +193,11 @@ alteration, addition or improvement. Tenant will not change any existing locks o
 additional locks on the Premises without first obtaining Landlord's written consent and without
 providing Landlord a copy of all keys.
 
-\section{20. Smoking.}
+\section{Smoking}
 Smoking of any kind is strictly prohibited on any part of the Premises. This prohibition
 applies to Tenant and any visitors, guests or other occupants on the Premises.
 
-\section{21. Pets.}
+\section{Pets}
 Tenant is not allowed to have or keep any pets, even temporarily, on any part of the Premises.
 The unauthorized presence of any pet will subject Tenant to penalties, damages, deductions
 and/or termination of this Agreement. Properly trained service animals that provide assistance
@@ -198,7 +207,7 @@ the costs of de-fleaing, deodorizing and/or shampooing all or any portion of the
 pet has been on the Premises at any time during the Term (whether with or without written
 consent of Landlord).
 
-\section{22. Fire and Casualty.}
+\section{Fire and Casualty}
 If the Premises are damaged by fire or other serious disaster or accident and the Premises
 becomes uninhabitable as a result, Tenant may immediately vacate the Premises and terminate
 this Agreement upon notice to Landlord. Tenant will be responsible for any unpaid rent or will
@@ -207,33 +216,33 @@ only partially damaged and inhabitable, Landlord may make full repairs and will 
 prompt and reasonable amount of time. At the discretion of Landlord, the rent may be reduced
 while the repairs are being made.
 
-\section{23. Liability.}
+\section{Liability}
 Landlord is not responsible or liable for any loss, claim, damage or expense as a result of
 any accident, injury or damage to any person or property occurring anywhere on the Premises,
 unless resulting from the gross negligence or willful misconduct of Landlord. Landlord encourages
 Tenant to obtain renter's insurance to protect against loss of personal property and liability.
 
-\section{24. Assignment and Subletting.}
+\section{Assignment and Subletting}
 Tenant will not assign this Agreement as to any portion or all of the Premises or make or
 permit any total or partial sublease or other transfer of any portion or all of the Premises.
 
-\section{25. Insurance Requirements.}
+\section{Insurance Requirements}
 Tenant will not do or permit to be done any act or thing that will increase the insurance risk
 under any policy of insurance covering the Premises. If the premium for such policy of
 insurance increases due to a breach of Tenant's obligations under this Agreement, Tenant will
 pay the additional amount of premium as additional rent under this Agreement.
 
-\section{26. Right of Entry.}
+\section{Right of Entry}
 Landlord or its agents may enter the Premises at reasonable times to inspect the Premises, to
 make any alterations, improvements or repairs or to show the Premises to a prospective tenant,
 buyer or lender. In the event of an emergency, Landlord may enter the Premises at any time.
 
-\section{27. Surrender.}
+\section{Surrender}
 Tenant will deliver and surrender to Landlord possession of the Premises immediately upon the
 expiration of the Term or the termination of this Agreement, clean and in as good condition and
 repair as the Premises was at the commencement of the Term, reasonable wear and tear excepted.
 
-\section{28. Default.}
+\section{Default}
 In the event of any default under this Agreement, Landlord may provide Tenant a notice of
 default and an opportunity to correct such default. If Tenant fails to correct the default,
 other than a failure to pay rent or additional rent, Landlord may terminate this Agreement by
@@ -243,18 +252,18 @@ giving a %%%DEFAULT_NOTICE_DAYS%%% day written notice to Tenant. After terminati
 remains liable for any rent, additional late, costs, including costs to remedy any defaults,
 and damages under this Agreement.
 
-\section{29. Remedies.}
+\section{Remedies}
 If this Agreement is terminated due to Tenant's default, Landlord may, in addition to any
 rights and remedies available under this Agreement and applicable law, use any dispossession,
 eviction or other similar legal proceeding available in law or equity.
 
-\section{30. Subordination.}
+\section{Subordination}
 This Agreement and Tenant's right under it shall be subject and subordinate to the lien,
 operation and effect of each existing or future mortgage, deed of trust, ground lease and/or
 any other similar instrument of encumbrance covering any or all of the Premises, if any, and
 each renewal, modification, consolidation, replacement or extension thereof.
 
-\section{31. Condemnation.}
+\section{Condemnation}
 If all or substantially all of the Premises are covered by a condemnation including the
 exercise of any power of eminent domain by a governmental authority, this Agreement shall
 terminate on the date possession of the Premises is taken by the condemning authority, and all
@@ -263,19 +272,19 @@ collect from the condemning authority the entire amount of any award made in any
 Tenant waives any right, title or interest which Tenant may have to any such award and agrees
 to not make any claim for the Term of this Agreement.
 
-\section{32. Hazardous Materials.}
+\section{Hazardous Materials}
 Tenant shall not keep on the Premises any item of a dangerous, flammable, or explosive
 character that might unreasonably increase the danger of fire or explosion on the Premises or
 that might be considered hazardous or extra hazardous by any responsible insurance company.
 
-\section{33. Lead Disclosure.}
+\section{Lead Disclosure}
 Housing built before 1978 may contain lead-based paint. Lead from paint, paint chips and dust
 can pose health hazards if not managed properly. Lead exposure is especially harmful to young
 children and pregnant women. Before renting pre-1978 housing, Landlord must disclose the
 presence of known lead-based paint and/or lead-based paint hazards in the dwelling. Tenant
 must also receive a federally approved pamphlet on lead poisoning prevention.
 
-\section{34. Notices.}
+\section{Notices}
 All notices given under this Agreement must be in writing. A notice is effective upon receipt
 and shall be delivered in person, sent via certified or registered mail to the following
 addresses (or to another address that either Party may designate upon reasonable notice to the
@@ -297,70 +306,80 @@ Notices shall be sent to the Tenant at the following address:
     Email: %%%TENANT_EMAIL%%%
 \end{quote}
 
-\section{35. Quiet Enjoyment.}
+\section{Quiet Enjoyment}
 If Tenant pays the rent and performs all other obligations under this Agreement, Tenant may
 peaceably and quietly hold and enjoy the Premises during the Term.
 
-\section{36. No Waiver.}
+\section{No Waiver}
 No Party shall be deemed to have waived any provision of this Agreement or the exercise of any
 rights held under this Agreement unless such waiver is made expressly and in writing.
 
-\section{37. Severability.}
+\section{Severability}
 If any provision of this Agreement is held to be invalid, illegal or unenforceable in whole or
 in part, the remaining provisions shall not be affected and shall continue to be valid, legal
 and enforceable as though the invalid, illegal or unenforceable part had not been included in
 this Agreement.
 
-\section{38. Successors and Assigns.}
+\section{Successors and Assigns}
 This Agreement will inure to the benefit of and be binding upon the Parties and their permitted
 successors and assigns.
 
-\section{39. Governing Law.}
+\section{Governing Law}
 The terms of this Agreement and the rights and obligations of the Parties hereto shall be
 governed by and construed in accordance with the laws of the State of California, without
 regard to its conflicts of laws provisions.
 
-\section{40. Disputes.}
+\section{Disputes}
 Any dispute arising from this Agreement shall be resolved through mediation. If the dispute
 cannot be resolved through mediation, then the dispute will be resolved through binding
 arbitration conducted in accordance with the rules of the American Arbitration Association.
 
-\section{41. Amendments.}
+\section{Amendments}
 This Agreement may be amended or modified only by a written agreement signed by the Parties.
 
-\section{42. Counterparts.}
+\section{Counterparts}
 This Agreement may be executed in one or more counterparts, each of which shall be deemed to
 be an original, and all of which together shall constitute one and the same document.
 
-\section{43. Headings.}
+\section{Headings}
 The section headings herein are for reference purposes only and shall not otherwise affect the
 meaning, construction or interpretation of any provision in this Agreement.
 
-\section{44. Entire Agreement.}
+\section{Entire Agreement}
 This Agreement constitutes the entire agreement between the Parties and supersedes and cancels
 all prior agreements of the Parties, whether written or oral, with respect to the subject
 matter.
 
 \vspace{2em}
 
+\begin{minipage}{\textwidth}
 IN WITNESS WHEREOF, the Parties hereto, individually or by their duly authorized
-representatives, have executed this Agreement as of the Effective Date.
+representatives, have executed this Agreement as of the Effective Date, %%%AGREEMENT_DATE%%%.
 
-\vspace{3em}
+\vspace{2em}
 
-\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
-    \rule{0.4\textwidth}{0.4pt} & \rule{0.4\textwidth}{0.4pt} \\
-    Landlord Signature & %%%LANDLORD_SIGNATURE_NAME%%% \\
-    & Landlord Name \\
+\textbf{LANDLORD:} %%%LANDLORD_LEGAL_NAME%%%
+
+\vspace{3.5em}
+
+\begin{tabular}{p{0.35\textwidth} p{0.45\textwidth} p{0.15\textwidth}}
+                                 & %%%LANDLORD_SIGNATORY_NAME%%%, %%%LANDLORD_SIGNATORY_TITLE%%% & \\[-0.3em]
+    \rule{0.32\textwidth}{0.4pt} & \rule{0.42\textwidth}{0.4pt}                                   & \rule{0.15\textwidth}{0.4pt} \\
+    Landlord Signature           & Printed Name, Title                                            & Date \\
 \end{tabular}
 
-\vspace{3em}
+\vspace{2em}
 
-\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
-    \rule{0.4\textwidth}{0.4pt} & \rule{0.4\textwidth}{0.4pt} \\
-    Tenant Signature & %%%TENANT_NAME%%% \\
-    & Tenant Name \\
+\textbf{TENANT:}
+
+\vspace{3.5em}
+
+\begin{tabular}{p{0.35\textwidth} p{0.45\textwidth} p{0.15\textwidth}}
+                                 & %%%TENANT_NAME%%%            & \\[-0.3em]
+    \rule{0.32\textwidth}{0.4pt} & \rule{0.42\textwidth}{0.4pt} & \rule{0.15\textwidth}{0.4pt} \\
+    Tenant Signature             & Printed Name                 & Date \\
 \end{tabular}
+\end{minipage}
 
 \newpage
 
@@ -419,20 +438,28 @@ Your Family from Lead in Your Home}.
 The following Parties have reviewed the information above and certify, to the best of their
 knowledge, that the information they have provided is true and accurate.
 
-\vspace{3em}
+\vspace{2em}
 
-\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
-    \rule{0.28\textwidth}{0.4pt} & \rule{0.28\textwidth}{0.4pt} & \rule{0.28\textwidth}{0.4pt} \\
-    Landlord Signature & %%%LANDLORD_SIGNATURE_NAME%%% & Date \\
-    & Landlord Name & \\
+\textbf{LANDLORD:} %%%LANDLORD_LEGAL_NAME%%%
+
+\vspace{3.5em}
+
+\begin{tabular}{p{0.35\textwidth} p{0.45\textwidth} p{0.15\textwidth}}
+                                 & %%%LANDLORD_SIGNATORY_NAME%%%, %%%LANDLORD_SIGNATORY_TITLE%%% & \\[-0.3em]
+    \rule{0.32\textwidth}{0.4pt} & \rule{0.42\textwidth}{0.4pt}                                   & \rule{0.15\textwidth}{0.4pt} \\
+    Landlord Signature           & Printed Name, Title                                            & Date \\
 \end{tabular}
 
-\vspace{3em}
+\vspace{2em}
 
-\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
-    \rule{0.28\textwidth}{0.4pt} & \rule{0.28\textwidth}{0.4pt} & \rule{0.28\textwidth}{0.4pt} \\
-    Tenant Signature & %%%TENANT_NAME%%% & Date \\
-    & Tenant Name & \\
+\textbf{TENANT:}
+
+\vspace{3.5em}
+
+\begin{tabular}{p{0.35\textwidth} p{0.45\textwidth} p{0.15\textwidth}}
+                                 & %%%TENANT_NAME%%%            & \\[-0.3em]
+    \rule{0.32\textwidth}{0.4pt} & \rule{0.42\textwidth}{0.4pt} & \rule{0.15\textwidth}{0.4pt} \\
+    Tenant Signature             & Printed Name                 & Date \\
 \end{tabular}
 
 \end{document}
